@@ -1,39 +1,65 @@
 package com.qa.tests;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.google.gson.JsonObject;
 import com.qa.base.BaseTest;
-import com.qa.pages.CertificatePage;
 import com.qa.pages.LoginPage;
+import com.qa.pages.CertificatePage;
 import com.qa.utils.JsonUtils;
+import com.qa.utils.ValidationUtils;
+import org.testng.annotations.Listeners;
+import com.qa.utils.TestListener;
+import org.testng.annotations.Test;
 
+
+@Listeners(TestListener.class)
 public class PurchaseInvestmentTest extends BaseTest {
 
-    @Test
+	@Test(
+		    description = "Verify investment purchase and certificate flow",
+		    groups = {"Investment", "Certificate"}
+		)
     public void purchaseInvestmentFlow() {
 
-        // Read test data
+        ValidationUtils validation = new ValidationUtils(driver);
+
+        // -------- TEST DATA --------
         JsonObject data = JsonUtils.getTestData("loginUsers.json", "validUser");
+        validation.assertNotNull(data, "Test data loaded successfully");
 
         String email = data.get("email").getAsString();
         String password = data.get("password").getAsString();
         int amount = data.get("amount").getAsInt();
-        int Tenor = data.get("Tenor").getAsInt();
-        int Fixed = data.get("Fixed").getAsInt();
+        int tenor = data.get("Tenor").getAsInt();
+        int fixed = data.get("Fixed").getAsInt();
 
-        // LOGIN
-        LoginPage login = new LoginPage();
-        login.launchAndLogin(email, password, amount, Tenor, Fixed);
+        // -------- LOGIN & INVESTMENT FLOW --------
+        LoginPage loginPage = new LoginPage(driver);
+        boolean loginSuccess =
+                loginPage.launchAndLogin(email, password, amount, tenor);
 
-        // CERTIFICATE FLOW
-        CertificatePage certificate = new CertificatePage(driver);
-        boolean isDownloaded = certificate.downloadCertificate();
+        validation.assertTrue(
+            loginSuccess,
+            "Login and investment flow completed successfully"
+        );
 
-        // ASSERT
-        Assert.assertTrue(isDownloaded, "Investment certificate download failed");
+        // -------- OVERVIEW SCREEN VALIDATION --------
+        boolean overviewDisplayed = loginPage.isOverviewDisplayed();
+
+        validation.assertTrue(
+            overviewDisplayed,
+            "Overview screen displayed after flow"
+        );
+
+        // -------- CERTIFICATE FLOW --------
+        CertificatePage certificatePage = new CertificatePage(driver);
+        boolean certificateDownloaded = certificatePage.downloadCertificate();
+
+        validation.assertTrue(
+            certificateDownloaded,
+            "Investment certificate downloaded successfully"
+        );
+
+        // -------- FINAL ASSERT --------
+        validation.assertAll("PurchaseInvestmentTest completed");
     }
 }
-
-

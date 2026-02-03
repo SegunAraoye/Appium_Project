@@ -5,6 +5,8 @@
     <classes>
       <class name="com.qa.tests.PurchaseInvestmentTest">
         <methods>
+          <include name="setupExtent"/>
+          <include name="flushExtent"/>
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="purchaseInvestmentFlow"/>

@@ -2,26 +2,100 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-27T00:55:58 GMT" name="Default suite" finished-at="2026-01-27T00:57:14 GMT" duration-ms="75728">
+  <suite started-at="2026-02-02T10:37:43 GMT" name="Default suite" finished-at="2026-02-02T10:39:07 GMT" duration-ms="83958">
     <groups>
+      <group name="Certificate">
+        <method signature="PurchaseInvestmentTest.purchaseInvestmentFlow()[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@5f9b2141]" name="purchaseInvestmentFlow" class="com.qa.tests.PurchaseInvestmentTest"/>
+      </group> <!-- Certificate -->
+      <group name="Investment">
+        <method signature="PurchaseInvestmentTest.purchaseInvestmentFlow()[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@5f9b2141]" name="purchaseInvestmentFlow" class="com.qa.tests.PurchaseInvestmentTest"/>
+      </group> <!-- Investment -->
     </groups>
-    <test started-at="2026-01-27T00:55:58 GMT" name="Default test" finished-at="2026-01-27T00:57:14 GMT" duration-ms="75728">
+    <test started-at="2026-02-02T10:37:43 GMT" name="Default test" finished-at="2026-02-02T10:39:07 GMT" duration-ms="83958">
       <class name="com.qa.tests.PurchaseInvestmentTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@6bedbc4d]" started-at="2026-01-27T00:55:58 GMT" name="setUp" finished-at="2026-01-27T00:56:08 GMT" duration-ms="9984" status="PASS">
+        <test-method is-config="true" signature="setupExtent()[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@5f9b2141]" started-at="2026-02-02T10:37:43 GMT" name="setupExtent" finished-at="2026-02-02T10:37:43 GMT" duration-ms="356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupExtent -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@5f9b2141]" started-at="2026-02-02T10:37:43 GMT" name="setUp" finished-at="2026-02-02T10:37:52 GMT" duration-ms="9385" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.tests.PurchaseInvestmentTest.purchaseInvestmentFlow()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[RZCT31F32FP]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[RZCT31F32FP]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="purchaseInvestmentFlow()[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@6bedbc4d]" started-at="2026-01-27T00:56:08 GMT" name="purchaseInvestmentFlow" finished-at="2026-01-27T00:57:12 GMT" duration-ms="64487" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="purchaseInvestmentFlow()[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@5f9b2141]" started-at="2026-02-02T10:37:52 GMT" name="purchaseInvestmentFlow" description="Verify investment purchase and certificate flow" finished-at="2026-02-02T10:39:07 GMT" duration-ms="74508" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.AndroidUIAutomator: new UiSelector().resourceId("com.unionbankng.marcusproject.debug:id/navigation_bar_item_icon_view").instance(4) (tried for 15 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[A session is either terminated or not started
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-SBHQ9F3', ip: '10.58.118.250', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.unionbankng.marcusproje..., appPackage: com.unionbankng.marcusproje..., autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.unionbankng.marcusproje..., appPackage: com.unionbankng.marcusproje..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RZCT31F32FP, platformName: android, platformVersion: 14, udid: RZCT31F32FP}, deviceApiLevel: 34, deviceManufacturer: samsung, deviceModel: SM-A536E, deviceName: RZCT31F32FP, deviceScreenDensity: 450, deviceScreenSize: 1080x2400, deviceUDID: RZCT31F32FP, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.8125, platform: LINUX, platformName: Android, platformVersion: 14, statBarHeight: 87, takesScreenshot: true, udid: RZCT31F32FP, viewportRect: {height: 2313, left: 0, top: 87, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 00b5569a-7d42-410a-9ca1-c24de3bdaa6a
+*** Element info: {Using=id, value=com.unionbankng.marcusproject.debug:id/btnCertificate}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.AndroidUIAutomator: new UiSelector().resourceId("com.unionbankng.marcusproject.debug:id/navigation_bar_item_icon_view").instance(4) (tried for 15 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at com.qa.pages.LoginPage.launchAndLogin(LoginPage.java:73)
-at com.qa.tests.PurchaseInvestmentTest.purchaseInvestmentFlow(PurchaseInvestmentTest.java:28)
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: A session is either terminated or not started
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-SBHQ9F3', ip: '10.58.118.250', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.unionbankng.marcusproje..., appPackage: com.unionbankng.marcusproje..., autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.unionbankng.marcusproje..., appPackage: com.unionbankng.marcusproje..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RZCT31F32FP, platformName: android, platformVersion: 14, udid: RZCT31F32FP}, deviceApiLevel: 34, deviceManufacturer: samsung, deviceModel: SM-A536E, deviceName: RZCT31F32FP, deviceScreenDensity: 450, deviceScreenSize: 1080x2400, deviceUDID: RZCT31F32FP, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.8125, platform: LINUX, platformName: Android, platformVersion: 14, statBarHeight: 87, takesScreenshot: true, udid: RZCT31F32FP, viewportRect: {height: 2313, left: 0, top: 87, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 00b5569a-7d42-410a-9ca1-c24de3bdaa6a
+*** Element info: {Using=id, value=com.unionbankng.marcusproject.debug:id/btnCertificate}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at com.qa.pages.CertificatePage.downloadCertificate(CertificatePage.java:25)
+at com.qa.tests.PurchaseInvestmentTest.purchaseInvestmentFlow(PurchaseInvestmentTest.java:55)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -50,15 +124,38 @@ at org.testng.TestNG.run(TestNG.java:1037)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- purchaseInvestmentFlow -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@5f9b2141]" started-at="2026-02-02T10:39:07 GMT" name="tearDown" finished-at="2026-02-02T10:39:07 GMT" duration-ms="15" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=purchaseInvestmentFlow status=FAILURE method=PurchaseInvestmentTest.purchaseInvestmentFlow()[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@5f9b2141] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[A session is either terminated or not started
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-SBHQ9F3', ip: '10.181.46.250', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+System info: host: 'DESKTOP-SBHQ9F3', ip: '10.58.118.250', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.unionbankng.marcusproje..., appPackage: com.unionbankng.marcusproje..., autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.unionbankng.marcusproje..., appPackage: com.unionbankng.marcusproje..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RZCT31F32FP, platformName: android, platformVersion: 14, udid: RZCT31F32FP}, deviceApiLevel: 34, deviceManufacturer: samsung, deviceModel: SM-A536E, deviceName: RZCT31F32FP, deviceScreenDensity: 450, deviceScreenSize: 1080x2400, deviceUDID: RZCT31F32FP, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.8125, platform: LINUX, platformName: Android, platformVersion: 14, statBarHeight: 87, takesScreenshot: true, udid: RZCT31F32FP, viewportRect: {height: 2313, left: 0, top: 87, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 30d80d78-ecf5-485d-83dd-9556ecc6bb7e
-*** Element info: {Using=-android uiautomator, value=new UiSelector().resourceId("com.unionbankng.marcusproject.debug:id/navigation_bar_item_icon_view").instance(4)}
-at jdk.internal.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+Session ID: 00b5569a-7d42-410a-9ca1-c24de3bdaa6a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: A session is either terminated or not started
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-SBHQ9F3', ip: '10.58.118.250', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.unionbankng.marcusproje..., appPackage: com.unionbankng.marcusproje..., autoGrantPermissions: true, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: com.unionbankng.marcusproje..., appPackage: com.unionbankng.marcusproje..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: RZCT31F32FP, platformName: android, platformVersion: 14, udid: RZCT31F32FP}, deviceApiLevel: 34, deviceManufacturer: samsung, deviceModel: SM-A536E, deviceName: RZCT31F32FP, deviceScreenDensity: 450, deviceScreenSize: 1080x2400, deviceUDID: RZCT31F32FP, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.8125, platform: LINUX, platformName: Android, platformVersion: 14, statBarHeight: 87, takesScreenshot: true, udid: RZCT31F32FP, viewportRect: {height: 2313, left: 0, top: 87, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 00b5569a-7d42-410a-9ca1-c24de3bdaa6a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -68,33 +165,54 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
 at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
-at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:220)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
+at com.qa.base.BaseTest.tearDown(BaseTest.java:95)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:701)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:677)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:661)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- purchaseInvestmentFlow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@6bedbc4d]" started-at="2026-01-27T00:57:12 GMT" name="tearDown" finished-at="2026-01-27T00:57:14 GMT" duration-ms="1208" status="PASS">
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="flushExtent()[pri:0, instance:com.qa.tests.PurchaseInvestmentTest@5f9b2141]" started-at="2026-02-02T10:39:07 GMT" name="flushExtent" finished-at="2026-02-02T10:39:07 GMT" duration-ms="450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushExtent -->
       </class> <!-- com.qa.tests.PurchaseInvestmentTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
